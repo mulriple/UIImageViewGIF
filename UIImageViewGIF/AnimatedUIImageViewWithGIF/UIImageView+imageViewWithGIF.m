@@ -38,13 +38,6 @@
     return ARCCompatibleAutorelease(imageView);
 }
 
-+ (UIImageView *)imageViewWithAnimatedGIFReleasingImageSource:(CGImageSourceRef) source 
-                                                  andDuration:(NSTimeInterval) duration {
-    UIImageView *imageView = [UIImageView imageViewWithAnimatedGIFImageSource:source andDuration:duration]; 
-    CFRelease(source);
-    return imageView;
-}
-
 + (NSTimeInterval)durationForGifData:(NSData *)data {
     char graphicControlExtensionStartBytes[] = {0x21,0xF9,0x04};
     double duration=0;
@@ -70,15 +63,15 @@
 
 + (UIImageView *)imageViewWithGIFData:(NSData *)data{
     NSTimeInterval duration = [self durationForGifData:data];
-    return [UIImageView imageViewWithAnimatedGIFReleasingImageSource:CGImageSourceCreateWithData(toCF data, NULL) 
-                                                         andDuration:duration];
+    CGImageSourceRef source = CGImageSourceCreateWithData(toCF data, NULL);
+    UIImageView *imageView = [UIImageView imageViewWithAnimatedGIFImageSource:source andDuration:duration]; 
+    CFRelease(source);
+    return imageView;
 }
 
 + (UIImageView *)imageViewWithGIFURL:(NSURL *)url{
     NSData *data = [NSData dataWithContentsOfURL:url];
-    NSTimeInterval duration = [self durationForGifData:data];
-    return [UIImageView imageViewWithAnimatedGIFReleasingImageSource:CGImageSourceCreateWithData(toCF data, NULL) 
-                                                         andDuration:duration];
+    return [UIImageView imageViewWithGIFData:data];
 }
 
 @end
