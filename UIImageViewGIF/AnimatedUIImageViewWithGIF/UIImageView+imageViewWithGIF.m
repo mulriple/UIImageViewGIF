@@ -5,7 +5,7 @@
 //  Copyright (c) 2012 eico design. All rights reserved.
 //
 
-#import "UIImageView+animatedImageViewWithGIF.h"
+#import "UIImageView+imageViewWithGIF.h"
 #import <ImageIO/ImageIO.h>
 
 #if __has_feature(objc_arc)

@@ -7,7 +7,7 @@
 //
 
 #import "DemoViewController.h"
-#import "UIImageView+animatedImageViewWithGIF.h"
+#import "UIImageView+imageViewWithGIF.h"
 
 @implementation DemoViewController
 

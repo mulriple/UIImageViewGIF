@@ -14,7 +14,7 @@
 		9D6569D814FB2DA900FA03D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6569D714FB2DA900FA03D8 /* main.m */; };
 		9D6569DC14FB2DA900FA03D8 /* DemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6569DB14FB2DA900FA03D8 /* DemoAppDelegate.m */; };
 		9D6569DF14FB2DA900FA03D8 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6569DE14FB2DA900FA03D8 /* DemoViewController.m */; };
-		9D6569EB14FB2E3000FA03D8 /* UIImageView+animatedImageViewWithGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6569EA14FB2E3000FA03D8 /* UIImageView+animatedImageViewWithGIF.m */; };
+		9D6569EB14FB2E3000FA03D8 /* UIImageView+imageViewWithGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6569EA14FB2E3000FA03D8 /* UIImageView+imageViewWithGIF.m */; };
 		9D6569ED14FB2ED100FA03D8 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D6569EC14FB2ED100FA03D8 /* ImageIO.framework */; };
 		9D6569EF14FB320E00FA03D8 /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9D6569EE14FB320E00FA03D8 /* demo.gif */; };
 /* End PBXBuildFile section */
@@ -32,8 +32,8 @@
 		9D6569DB14FB2DA900FA03D8 /* DemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoAppDelegate.m; sourceTree = "<group>"; };
 		9D6569DD14FB2DA900FA03D8 /* DemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
 		9D6569DE14FB2DA900FA03D8 /* DemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
-		9D6569E914FB2E3000FA03D8 /* UIImageView+animatedImageViewWithGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+animatedImageViewWithGIF.h"; sourceTree = "<group>"; };
-		9D6569EA14FB2E3000FA03D8 /* UIImageView+animatedImageViewWithGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+animatedImageViewWithGIF.m"; sourceTree = "<group>"; };
+		9D6569E914FB2E3000FA03D8 /* UIImageView+imageViewWithGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "UIImageView+imageViewWithGIF.h"; sourceTree = "<group>"; };
+		9D6569EA14FB2E3000FA03D8 /* UIImageView+imageViewWithGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+imageViewWithGIF.m"; sourceTree = "<group>"; };
 		9D6569EC14FB2ED100FA03D8 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		9D6569EE14FB320E00FA03D8 /* demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,8 +109,8 @@
 		9D6569E814FB2E3000FA03D8 /* AnimatedUIImageViewWithGIF */ = {
 			isa = PBXGroup;
 			children = (
-				9D6569E914FB2E3000FA03D8 /* UIImageView+animatedImageViewWithGIF.h */,
-				9D6569EA14FB2E3000FA03D8 /* UIImageView+animatedImageViewWithGIF.m */,
+				9D6569E914FB2E3000FA03D8 /* UIImageView+imageViewWithGIF.h */,
+				9D6569EA14FB2E3000FA03D8 /* UIImageView+imageViewWithGIF.m */,
 			);
 			path = AnimatedUIImageViewWithGIF;
 			sourceTree = "<group>";
@@ -180,7 +180,7 @@
 				9D6569D814FB2DA900FA03D8 /* main.m in Sources */,
 				9D6569DC14FB2DA900FA03D8 /* DemoAppDelegate.m in Sources */,
 				9D6569DF14FB2DA900FA03D8 /* DemoViewController.m in Sources */,
-				9D6569EB14FB2E3000FA03D8 /* UIImageView+animatedImageViewWithGIF.m in Sources */,
+				9D6569EB14FB2E3000FA03D8 /* UIImageView+imageViewWithGIF.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +282,7 @@
 				9D6569E714FB2DA900FA03D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
